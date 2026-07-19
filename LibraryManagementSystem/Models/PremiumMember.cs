@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Models
 {
-    internal class PremiumMember
+    public class PremiumMember : Member
     {
+        public override int MaxBorrowLimit => 10;
+        public override int LoanDays => 30;
+
+        public PremiumMember(int id, string name, string email) : base(id, name, email)
+        { }
+
+        public override string GetInfo()
+        {
+
+            {
+                return $"Premium Member - ID: {Id}, Name: {Name}, " +
+                    $"Email: {Email}, Limit: {MaxBorrowLimit}, " +
+                    $"LoanDays: {LoanDays}";
+            }
+        }
     }
 }
