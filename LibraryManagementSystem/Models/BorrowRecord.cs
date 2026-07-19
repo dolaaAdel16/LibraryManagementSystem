@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Models
 {
-    public class BorrowRecoed
+    public class BorrowRecord
     {
         public int Id { get; }    
         public Book Book { get; }  
@@ -14,7 +14,7 @@ namespace LibraryManagementSystem.Models
         public DateTime BorrowDate { get; } 
         public DateTime? ReturnDate { get; set; }
 
-        public BorrowRecoed(int id, Book book, Member member)
+        public BorrowRecord(int id, Book book, Member member)
         {
             Id = id;
             Book = book;
@@ -30,7 +30,7 @@ namespace LibraryManagementSystem.Models
                 return false;
             }
 
-            double borrowedDays = (DateTime.Now - BorrowDate).TotalDays;
+            double borrowedDays = (DateTime.Now - BorrowDate).TotalDays ;
 
             return borrowedDays > Member.LoanDays;
         }
