@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Models
 {
-    internal class Member : ISearchable
+    public class Member : ISearchable
     {
         public int Id { get; }
         public string Name { get; set; }

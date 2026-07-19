@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Models
 {
-    internal class Book : LibraryItem, ISearchable
+    public class Book : LibraryItem, ISearchable
     {
         public string Author { get; set; }
         public int Year { get; set; }
